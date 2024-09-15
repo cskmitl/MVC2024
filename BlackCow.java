@@ -1,5 +1,9 @@
 // BlackCow.java
+import java.util.Random;
+
 public class BlackCow extends Cow {
+
+    private Random random = new Random();
 
     public BlackCow(String name) {
         super(name);
@@ -11,7 +15,7 @@ public class BlackCow extends Cow {
 
         // โอกาส 20% ที่จะโกง (รายงานว่าล้มพินทั้งหมด)
         if (random.nextDouble() < 0.2) {
-            System.out.println(name + " reported all pins down, but cheated!");
+            System.out.println(getName() + " reported all pins down, but cheated!");
             return remainingPins;
         }
 
